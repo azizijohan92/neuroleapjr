@@ -1,1 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
 
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard | NeuroLeap Junior</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <header class="app-header">
+        <a href="dashboard.html" class="brand">
+            <span class="brand-icon">⚡</span>
+            NeuroLeap
+        </a>
+
+        <div class="header-actions">
+            <span id="parentName">Parent</span>
+
+            <button id="logoutButton" class="outline-button">
+                Log out
+            </button>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+
+        <section class="welcome-panel">
+            <div>
+                <span class="eyebrow">Parent dashboard</span>
+
+                <h1>
+                    Welcome,
+                    <span id="welcomeName">Parent</span>!
+                </h1>
+
+                <p>
+                    Select a child profile or create a new one.
+                </p>
+            </div>
+
+            <button id="openChildModal" class="primary-button">
+                + Add Child
+            </button>
+        </section>
+
+        <section class="summary-grid">
+            <article class="summary-card">
+                <span>Children</span>
+                <strong id="totalChildren">0</strong>
+            </article>
+
+            <article class="summary-card">
+                <span>Total activities</span>
+                <strong id="totalActivities">0</strong>
+            </article>
+
+            <article class="summary-card">
+                <span>Average score</span>
+                <strong id="averageScore">0%</strong>
+            </article>
+        </section>
+
+        <section>
+            <div class="section-title-row">
+                <div>
+                    <span class="eyebrow">Profiles</span>
+                    <h2>Choose a learner</h2>
+                </div>
+            </div>
+
+            <div id="childrenGrid" class="children-grid">
+                <p id="emptyChildrenMessage">
+                    No child profile yet. Add your first child.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="childModal" class="modal hidden">
+        <div class="modal-content">
+            <button
+                type="button"
+                id="closeChildModal"
+                class="modal-close"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+            <h2>Add Child Profile</h2>
+
+            <form id="childForm">
+                <label for="childName">Child name</label>
+
+                <input
+                    id="childName"
+                    name="childName"
+                    type="text"
+                    maxlength="30"
+                    required
+                >
+
+                <label for="childAge">Age</label>
+
+                <select
+                    id="childAge"
+                    name="childAge"
+                    required
+                >
+                    <option value="">Select age</option>
+                    <option value="4">4 years old</option>
+                    <option value="5">5 years old</option>
+                    <option value="6">6 years old</option>
+                    <option value="7">7 years old</option>
+                    <option value="8">8 years old</option>
+                </select>
+
+                <label for="childAvatar">Avatar</label>
+
+                <select
+                    id="childAvatar"
+                    name="childAvatar"
+                    required
+                >
+                    <option value="🦸">Super Hero</option>
+                    <option value="🧙">Magic Hero</option>
+                    <option value="🚀">Space Hero</option>
+                    <option value="🐯">Tiger Hero</option>
+                    <option value="🤖">Robot Hero</option>
+                </select>
+
+                <button type="submit" class="primary-button full-button">
+                    Create Profile
+                </button>
+
+                <p id="childFormMessage"></p>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="js/dashboard.js"></script>
+
+</body>
+</html>
