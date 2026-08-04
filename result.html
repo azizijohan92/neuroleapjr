@@ -1,1 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
 
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Mission Complete | NeuroLeap</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            min-height: 100vh;
+            padding: 20px;
+
+            display: grid;
+            place-items: center;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(255, 214, 0, 0.45),
+                    transparent 45%
+                ),
+                #f4f5f7;
+        }
+
+        .result-card {
+            width: min(100%, 560px);
+            padding: 42px;
+
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+
+            text-align: center;
+        }
+
+        .result-trophy {
+            font-size: 6rem;
+        }
+
+        .result-card h1 {
+            margin: 12px 0 6px;
+            font-size: 2.6rem;
+        }
+
+        .result-card > p {
+            color: #6f7280;
+        }
+
+        .result-stats {
+            margin: 30px 0;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .result-stat {
+            padding: 18px 10px;
+
+            background: #f4f5f7;
+            border-radius: 16px;
+        }
+
+        .result-stat span {
+            display: block;
+            color: #6f7280;
+            font-size: 0.8rem;
+        }
+
+        .result-stat strong {
+            font-size: 1.5rem;
+        }
+
+        .result-actions {
+            display: grid;
+            gap: 10px;
+        }
+
+        @media (max-width: 500px) {
+            .result-card {
+                padding: 30px 20px;
+            }
+
+            .result-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="result-card">
+        <div class="result-trophy">🏆</div>
+
+        <h1>Mission Complete!</h1>
+
+        <p id="resultMessage">
+            Excellent work, Hero!
+        </p>
+
+        <div class="result-stats">
+            <article class="result-stat">
+                <span>Score</span>
+                <strong id="resultScore">0</strong>
+            </article>
+
+            <article class="result-stat">
+                <span>Correct</span>
+                <strong id="resultCorrect">0/0</strong>
+            </article>
+
+            <article class="result-stat">
+                <span>XP Earned</span>
+                <strong id="resultXp">0</strong>
+            </article>
+        </div>
+
+        <div class="result-actions">
+            <a href="quiz.html" class="primary-button">
+                Play Again
+            </a>
+
+            <a href="child.html" class="secondary-button">
+                Choose Another Mission
+            </a>
+
+            <a href="dashboard.html" class="secondary-button">
+                Parent Dashboard
+            </a>
+        </div>
+    </section>
+
+    <script type="module" src="js/result.js"></script>
+
+</body>
+</html>
