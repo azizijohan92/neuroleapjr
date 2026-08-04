@@ -1,1 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
 
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="NeuroLeap Junior is an interactive cognitive learning app for young children."
+    >
+
+    <title>NeuroLeap Junior</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="brand">
+            <span class="brand-icon">⚡</span>
+            NeuroLeap
+        </a>
+
+        <nav class="nav-menu">
+            <a href="#features">Features</a>
+            <a href="#subjects">Activities</a>
+            <a href="#parents">For Parents</a>
+            <a href="login.html" class="nav-button">Start Learning</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="hero-label">
+                    Learning Through Play
+                </span>
+
+                <h1>
+                    Build brighter minds,
+                    <span>one challenge at a time.</span>
+                </h1>
+
+                <p>
+                    Interactive cognitive games designed to improve
+                    memory, logic, maths and problem-solving skills.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="login.html" class="primary-button">
+                        Start Free
+                    </a>
+
+                    <a href="#features" class="secondary-button">
+                        Explore Features
+                    </a>
+                </div>
+
+                <div class="hero-points">
+                    <span>✓ Child-friendly</span>
+                    <span>✓ Parent monitoring</span>
+                    <span>✓ Progress tracking</span>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-card main-card">
+                    <div class="character">🦸</div>
+                    <h3>Ready for today's mission?</h3>
+                    <p>Complete 5 challenges to earn a badge.</p>
+
+                    <div class="progress-track">
+                        <div class="progress-fill"></div>
+                    </div>
+
+                    <strong>3 of 5 completed</strong>
+                </div>
+
+                <div class="floating-card score-card">
+                    ⭐ 850 XP
+                </div>
+
+                <div class="floating-card badge-card">
+                    🏆 New Badge
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="section">
+            <div class="section-heading">
+                <span>Why NeuroLeap?</span>
+                <h2>Everything children need to enjoy learning</h2>
+            </div>
+
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Cognitive Skills</h3>
+                    <p>
+                        Activities covering memory, logic, attention
+                        and problem-solving.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon">🎮</div>
+                    <h3>Game-Based Learning</h3>
+                    <p>
+                        Points, timers, badges and levels make every
+                        lesson feel like a mission.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Parent Dashboard</h3>
+                    <p>
+                        Parents can review scores and progress for
+                        every child profile.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="subjects" class="section activities-section">
+            <div class="section-heading">
+                <span>Learning Activities</span>
+                <h2>Choose your next mission</h2>
+            </div>
+
+            <div class="activity-grid">
+                <article class="activity-card">
+                    <span>🔢</span>
+                    <h3>Math Challenge</h3>
+                    <p>Addition, subtraction and number recognition.</p>
+                </article>
+
+                <article class="activity-card">
+                    <span>🧩</span>
+                    <h3>Logic Puzzle</h3>
+                    <p>Patterns, matching and reasoning activities.</p>
+                </article>
+
+                <article class="activity-card">
+                    <span>👀</span>
+                    <h3>Memory Game</h3>
+                    <p>Visual memory and attention exercises.</p>
+                </article>
+
+                <article class="activity-card">
+                    <span>🔤</span>
+                    <h3>Word Power</h3>
+                    <p>Letters, spelling and simple vocabulary.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="parents" class="parent-section">
+            <div>
+                <span class="section-label">For Parents</span>
+
+                <h2>Monitor every child's learning journey</h2>
+
+                <p>
+                    Create multiple child profiles under one parent
+                    account and monitor their individual results.
+                </p>
+
+                <ul>
+                    <li>Individual score history</li>
+                    <li>Learning progress overview</li>
+                    <li>Strength and weakness indicators</li>
+                    <li>Weekly activity summary</li>
+                </ul>
+
+                <a href="login.html" class="primary-button">
+                    Create Parent Account
+                </a>
+            </div>
+
+            <div class="dashboard-preview">
+                <h3>Weekly Progress</h3>
+
+                <div class="preview-stat">
+                    <span>Activities completed</span>
+                    <strong>18</strong>
+                </div>
+
+                <div class="preview-stat">
+                    <span>Correct answers</span>
+                    <strong>87%</strong>
+                </div>
+
+                <div class="preview-stat">
+                    <span>Total XP</span>
+                    <strong>1,240</strong>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 NeuroLeap Junior. All rights reserved.</p>
+    </footer>
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("./service-worker.js")
+                .catch((error) => {
+                    console.error("Service worker error:", error);
+                });
+        }
+    </script>
+
+</body>
+</html>
