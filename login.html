@@ -1,1 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
 
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Login | NeuroLeap Junior</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 24px;
+
+            background:
+                radial-gradient(
+                    circle at top right,
+                    rgba(255, 214, 0, 0.5),
+                    transparent 40%
+                ),
+                #f7f7f7;
+        }
+
+        .login-card {
+            width: min(100%, 460px);
+            padding: 38px;
+
+            background: white;
+            border: 1px solid #e6e7eb;
+            border-radius: 28px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+
+            text-align: center;
+        }
+
+        .login-logo {
+            width: 82px;
+            height: 82px;
+            margin: 0 auto 20px;
+
+            display: grid;
+            place-items: center;
+
+            background: #ffd600;
+            border-radius: 24px;
+
+            font-size: 2.5rem;
+        }
+
+        .login-card h1 {
+            font-size: 2rem;
+        }
+
+        .login-card p {
+            margin: 10px 0 28px;
+            color: #6f7280;
+        }
+
+        .login-button {
+            width: 100%;
+            min-height: 54px;
+            margin-top: 12px;
+            padding: 12px;
+
+            border: 0;
+            border-radius: 14px;
+
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        .google-button {
+            background: #121212;
+            color: white;
+        }
+
+        .guest-button {
+            background: #ffd600;
+            color: #121212;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 24px;
+
+            color: #6f7280;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        #loginMessage {
+            min-height: 25px;
+            margin-top: 16px;
+
+            color: #b42318;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="login-card">
+        <div class="login-logo">⚡</div>
+
+        <h1>Welcome to NeuroLeap</h1>
+
+        <p>
+            Sign in as a parent or continue as a guest.
+        </p>
+
+        <button
+            type="button"
+            id="googleLoginButton"
+            class="login-button google-button"
+        >
+            Continue with Google
+        </button>
+
+        <button
+            type="button"
+            id="guestLoginButton"
+            class="login-button guest-button"
+        >
+            Continue as Guest
+        </button>
+
+        <div id="loginMessage"></div>
+
+        <a href="index.html" class="back-link">
+            ← Back to home
+        </a>
+    </section>
+
+    <script type="module" src="js/auth.js"></script>
+
+</body>
+</html>
