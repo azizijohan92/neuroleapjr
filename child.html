@@ -1,1 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
 
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Learning Missions | NeuroLeap</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            min-height: 100vh;
+            background: #f4f5f7;
+        }
+
+        .mission-header {
+            padding: 22px 6%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            background: white;
+            border-bottom: 1px solid #e6e7eb;
+        }
+
+        .mission-main {
+            width: min(92%, 1100px);
+            margin: 45px auto;
+        }
+
+        .mission-intro {
+            padding: 35px;
+
+            background: #121212;
+            color: white;
+            border-radius: 28px;
+        }
+
+        .mission-intro h1 {
+            font-size: clamp(2rem, 5vw, 3.6rem);
+        }
+
+        .mission-intro span {
+            color: #ffd600;
+        }
+
+        .mission-grid {
+            margin-top: 30px;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .mission-card {
+            padding: 28px;
+
+            background: white;
+            border: 1px solid #e6e7eb;
+            border-radius: 22px;
+        }
+
+        .mission-icon {
+            font-size: 3.5rem;
+        }
+
+        .mission-card h2 {
+            margin: 12px 0 8px;
+        }
+
+        .mission-card p {
+            min-height: 52px;
+            color: #6f7280;
+        }
+
+        .mission-button {
+            width: 100%;
+            margin-top: 20px;
+
+            background: #ffd600;
+            border: 0;
+
+            cursor: pointer;
+        }
+
+        @media (max-width: 650px) {
+            .mission-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="mission-header">
+        <a href="dashboard.html" class="brand">
+            <span class="brand-icon">⚡</span>
+            NeuroLeap
+        </a>
+
+        <a href="dashboard.html" class="secondary-button">
+            Parent Dashboard
+        </a>
+    </header>
+
+    <main class="mission-main">
+        <section class="mission-intro">
+            <p>Welcome back</p>
+
+            <h1>
+                <span id="childName">Hero</span>,
+                choose your mission!
+            </h1>
+        </section>
+
+        <section class="mission-grid">
+            <article class="mission-card">
+                <div class="mission-icon">🔢</div>
+                <h2>Math Mission</h2>
+                <p>
+                    Solve number and calculation challenges.
+                </p>
+
+                <button
+                    class="primary-button mission-button"
+                    data-category="math"
+                >
+                    Start Mission
+                </button>
+            </article>
+
+            <article class="mission-card">
+                <div class="mission-icon">🧩</div>
+                <h2>Logic Mission</h2>
+                <p>
+                    Complete patterns and logic puzzles.
+                </p>
+
+                <button
+                    class="primary-button mission-button"
+                    data-category="logic"
+                >
+                    Start Mission
+                </button>
+            </article>
+
+            <article class="mission-card">
+                <div class="mission-icon">👀</div>
+                <h2>Memory Mission</h2>
+                <p>
+                    Train visual memory and attention.
+                </p>
+
+                <button
+                    class="primary-button mission-button"
+                    data-category="memory"
+                >
+                    Start Mission
+                </button>
+            </article>
+
+            <article class="mission-card">
+                <div class="mission-icon">🔤</div>
+                <h2>Word Mission</h2>
+                <p>
+                    Learn simple spelling and vocabulary.
+                </p>
+
+                <button
+                    class="primary-button mission-button"
+                    data-category="word"
+                >
+                    Start Mission
+                </button>
+            </article>
+        </section>
+    </main>
+
+    <script type="module" src="js/child.js"></script>
+
+</body>
+</html>
