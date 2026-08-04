@@ -1,1 +1,283 @@
+body {
+    min-height: 100vh;
+    background: #f4f5f7;
+}
 
+.app-header {
+    min-height: 76px;
+    padding: 14px 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: white;
+    border-bottom: 1px solid #e6e7eb;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    font-weight: 800;
+}
+
+.outline-button {
+    padding: 10px 16px;
+
+    background: white;
+    border: 1px solid #d5d7dc;
+    border-radius: 12px;
+
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.dashboard-container {
+    width: min(92%, 1180px);
+    margin: 40px auto 80px;
+}
+
+.welcome-panel {
+    padding: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    background: #121212;
+    color: white;
+    border-radius: 28px;
+}
+
+.welcome-panel h1 {
+    margin: 4px 0 10px;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+}
+
+.welcome-panel h1 span {
+    color: #ffd600;
+}
+
+.welcome-panel p {
+    color: #c7c7c7;
+}
+
+.eyebrow {
+    color: #9f8200;
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.summary-grid {
+    margin: 28px 0 55px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.summary-card {
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    background: white;
+    border: 1px solid #e6e7eb;
+    border-radius: 20px;
+}
+
+.summary-card span {
+    color: #6f7280;
+    font-weight: 700;
+}
+
+.summary-card strong {
+    font-size: 2.2rem;
+}
+
+.section-title-row {
+    margin-bottom: 24px;
+}
+
+.section-title-row h2 {
+    margin-top: 4px;
+    font-size: 2rem;
+}
+
+.children-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.child-card {
+    padding: 26px;
+
+    background: white;
+    border: 1px solid #e6e7eb;
+    border-radius: 24px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.child-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
+}
+
+.child-avatar {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 18px;
+
+    display: grid;
+    place-items: center;
+
+    background: #ffd600;
+    border-radius: 22px;
+
+    font-size: 2.8rem;
+}
+
+.child-card h3 {
+    font-size: 1.45rem;
+}
+
+.child-card p {
+    margin: 5px 0 16px;
+    color: #6f7280;
+}
+
+.child-stats {
+    display: flex;
+    gap: 10px;
+}
+
+.child-stat {
+    flex: 1;
+    padding: 10px;
+
+    background: #f4f5f7;
+    border-radius: 12px;
+
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.child-stat strong {
+    display: block;
+    font-size: 1rem;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+
+    padding: 20px;
+
+    display: grid;
+    place-items: center;
+
+    background: rgba(0, 0, 0, 0.62);
+}
+
+.modal-content {
+    width: min(100%, 480px);
+    padding: 34px;
+
+    position: relative;
+
+    background: white;
+    border-radius: 26px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+
+    background: none;
+    border: 0;
+
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    margin-bottom: 24px;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-content label {
+    margin-top: 8px;
+    font-weight: 800;
+}
+
+.modal-content input,
+.modal-content select {
+    width: 100%;
+    min-height: 50px;
+    padding: 12px 14px;
+
+    background: white;
+    border: 1px solid #d6d7dc;
+    border-radius: 12px;
+}
+
+.full-button {
+    width: 100%;
+    margin-top: 18px;
+    border: 0;
+    cursor: pointer;
+}
+
+#childFormMessage {
+    min-height: 24px;
+    color: #b42318;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .summary-grid,
+    .children-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .app-header {
+        padding: 12px 4%;
+    }
+
+    #parentName {
+        display: none;
+    }
+
+    .welcome-panel {
+        padding: 28px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .summary-grid,
+    .children-grid {
+        grid-template-columns: 1fr;
+    }
+}
